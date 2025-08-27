@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chumpy"
+version = "0.71"
+description = "chumpy"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Matthew Loper", email = "matt.loper@gmail.com"}
+]
+maintainers = [
+    {name = "Matthew Loper", email = "matt.loper@gmail.com"}
+]
+keywords = ["mathematics", "scientific computing", "automatic differentiation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.8.1",
+    "scipy>=0.13.0",
+    "six>=1.11.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/mattloper/chumpy"
+Repository = "https://github.com/mattloper/chumpy"
+Issues = "https://github.com/mattloper/chumpy/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["chumpy*"]
+
+[tool.setuptools.package-data]
+chumpy = ["*.py", "*.c", "*.h", "*.pyx"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=6.0",
+    "coverage>=5.0",
+    "twine>=3.0"
+]
+
+[tool.uv.sources]
+# You can add any additional source configurations here if needed
